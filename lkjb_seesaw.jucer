@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="pbQkwA" name="lkjb_seesaw" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" companyName="lkjb"
+              companyWebsite="lkjbdsp.wordpress.com/" companyEmail="lkjb.dsp@gmail.com"
+              pluginFormats="buildAU,buildVST,buildVST3" pluginManufacturerCode="Lkjb"
+              bundleIdentifier="com.lkjb.lkjbseesaw" displaySplashScreen="1"
+              pluginVST3Category="EQ" version="2.0.0">
+  <MAINGROUP id="TmDJvK" name="lkjb_seesaw">
+    <GROUP id="{0DDB29FE-9D1D-9015-8F9A-85AE396B4A42}" name="Source">
+      <GROUP id="{C66E1B45-5EC7-12E0-58FB-9C0E6E40F0BF}" name="BandAnalyser">
+        <FILE id="Bau5c4" name="BandAnalyser.cpp" compile="1" resource="0"
+              file="Source/BandAnalyser/BandAnalyser.cpp"/>
+        <FILE id="K3OCOr" name="BandAnalyser.h" compile="0" resource="0" file="Source/BandAnalyser/BandAnalyser.h"/>
+        <FILE id="yDUAcC" name="BandAnalyserFilter.cpp" compile="1" resource="0"
+              file="Source/BandAnalyser/BandAnalyserFilter.cpp"/>
+        <FILE id="jPQ4k5" name="BandAnalyserFilter.h" compile="0" resource="0"
+              file="Source/BandAnalyser/BandAnalyserFilter.h"/>
+        <FILE id="laydMZ" name="BandPassFilterCreator.cpp" compile="1" resource="0"
+              file="Source/BandAnalyser/BandPassFilterCreator.cpp"/>
+        <FILE id="MsHUfR" name="BandPassFilterCreator.h" compile="0" resource="0"
+              file="Source/BandAnalyser/BandPassFilterCreator.h"/>
+        <FILE id="piOlyZ" name="FilterLayout.h" compile="0" resource="0" file="Source/BandAnalyser/FilterLayout.h"/>
+        <FILE id="dzfGKT" name="SimdBandFilter.cpp" compile="1" resource="0"
+              file="Source/BandAnalyser/SimdBandFilter.cpp"/>
+        <FILE id="VM0JUT" name="SimdBandFilter.h" compile="0" resource="0"
+              file="Source/BandAnalyser/SimdBandFilter.h"/>
+      </GROUP>
+      <FILE id="VIIWZn" name="FreqPlot.cpp" compile="1" resource="0" file="Source/FreqPlot.cpp"/>
+      <FILE id="FcXu8w" name="FreqPlot.h" compile="0" resource="0" file="Source/FreqPlot.h"/>
+      <FILE id="QC4RRL" name="lkjbFilter.h" compile="0" resource="0" file="Source/lkjbFilter.h"/>
+      <FILE id="Fr7XIi" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="Yu3oYJ" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="Nx5nHV" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="Q6zGHd" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="q8M87P" name="SeeSaw.cpp" compile="1" resource="0" file="Source/SeeSaw.cpp"/>
+      <FILE id="ru0ao5" name="SeeSaw.h" compile="0" resource="0" file="Source/SeeSaw.h"/>
+      <FILE id="vNfM3p" name="SliderLookAndFeel.h" compile="0" resource="0"
+            file="Source/SliderLookAndFeel.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" winArchitecture="Win32,x64"/>
+        <CONFIGURATION isDebug="0" name="Release" winArchitecture="Win32,x64"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+      </MODULEPATHS>
+    </VS2022>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../juce"/>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="../JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors_headless" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+    <OSX/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>
